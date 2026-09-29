@@ -1,10 +1,12 @@
-var s = '';
-var tinggi = 5;
-var lebar = tinggi;
+let tinggi = 5;
 
-for ( var i = 1; i <= tinggi; i++) {
-    for ( j = tinggi; j <= tinggi; j++ ) {
-        s += '1';
+for ( let i = 0; i < tinggi; i++) {
+    let line = ' '.repeat((rows - i)*2);
+    let val = 1;
+
+    for (let j = 0; j <= i; j++ ) {
+        line += val + '  ';
+        val = val * (i-j)/(j+1);
     }
 }
-console.log(s);
+console.log(line);
