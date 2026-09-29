@@ -1,0 +1,97 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Mengatur konten body dalam kolom */
+    align-items: center; /* Pusatkan konten horizontal */
+    min-height: 100vh; /* Pastikan body mengambil tinggi viewport penuh */
+    margin: 0;
+    background-color: #e0f2f7; /* Warna latar belakang yang lembut */
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.angkot-container {
+    display: flex; /* Aktifkan Flexbox untuk tata letak baris */
+    flex-wrap: wrap; /* Izinkan item untuk pindah ke baris baru */
+    justify-content: center; /* Pusatkan angkot secara horizontal di dalam container */
+    gap: 25px; /* Memberi jarak antara setiap angkot (horizontal dan vertikal) */
+    max-width: 1200px; /* Batasi lebar container agar angkot bisa pecah baris */
+    width: 100%; /* Pastikan container mengambil lebar yang tersedia */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih menonjol */
+}
+
+.angkot-item {
+    display: flex;
+    flex-direction: column; /* Nomor di atas gambar */
+    align-items: center; /* Pusatkan konten di dalam item */
+    background-color: #f8fcfd; /* Warna latar belakang untuk setiap angkot */
+    border: 2px solid #a7d9ed; /* Border yang lebih menonjol */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Bayangan untuk setiap angkot */
+    transition: transform 0.2s ease-in-out; /* Efek transisi saat hover */
+    flex-basis: calc(20% - 25px); /* Untuk 5 angkot per baris (100%/5 - gap) */
+    min-width: 150px; /* Pastikan ada lebar minimum agar tidak terlalu kecil */
+    box-sizing: border-box; /* Pastikan padding dan border termasuk dalam lebar */
+}
+
+.angkot-item:hover {
+    transform: translateY(-5px); /* Sedikit efek naik saat di-hover */
+}
+
+.angkot-number {
+    font-size: 2em; /* Ukuran font nomor angkot */
+    font-weight: 800; /* Lebih tebal */
+    color: #007bff; /* Warna biru untuk nomor */
+    margin-bottom: 10px; /* Jarak antara nomor dan gambar */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.angkot-item img {
+    max-width: 100%; /* Gambar akan mengisi lebar div angkot-item */
+    height: auto; /* Jaga rasio aspek gambar */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    border-radius: 5px; /* Sudut sedikit membulat pada gambar */
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar sedang (misalnya tablet) - 3 angkot per baris */
+@media (max-width: 992px) {
+    .angkot-item {
+        flex-basis: calc(33.33% - 25px); /* 3 angkot per baris */
+    }
+}
+
+/* Untuk layar kecil (misalnya ponsel) - 2 angkot per baris */
+@media (max-width: 600px) {
+    .angkot-item {
+        flex-basis: calc(50% - 25px); /* 2 angkot per baris */
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Untuk layar sangat kecil */
+@media (max-width: 400px) {
+    .angkot-item {
+        flex-basis: 100%; /* 1 angkot per baris */
+    }
+    .angkot-container {
+        padding: 10px;
+    }
+}

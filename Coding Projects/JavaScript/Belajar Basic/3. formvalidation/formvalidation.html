@@ -1,0 +1,23 @@
+<!-- Form Validasi JS -->
+<form id="myForm" action="/submit_data" method="POST">
+    <label for="username">Nama Pengguna:</label><br>
+    <input type="text" id="username" name="username" required><br>
+    <span id="usernameError" style="color: red;"></span><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <span id="emailError" style="color: red;"></span><br><br>
+    
+    <!-- Form Nomor HP -->
+    <label for="phoneNumber">Nomor Telepon:</label><br>
+    <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+    <span id="phoneNumberError" style="color: red;"></span><br><br>
+    <!-- akhir form Nomor HP -->
+
+    <label for="password">Kata Sandi:</label><br>
+    <input type="password" id="password" name="password" minlength="6" required><br>
+    <span id="passwordError" style="color: red;"></span><br><br>
+
+    <input type="submit" value="Daftar">
+</form>
+<script src="index.js"></script>

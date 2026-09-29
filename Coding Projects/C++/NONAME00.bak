@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    //Deklarasi Variabel
+    char nama[30],nim[10],prodi[20];
+
+    //Inputan
+    cout<<"\t\tData Inputan"<<endl;
+    cout<<"====================================="<<endl;
+    cout<<"Masukkan Nama Lengkap\t:";
+    cin>>nama;
+    cout<<"Masukkan NIM\t\t:";
+    cin>>nim;
+    cout<<"Masukkan Program Studi\t:";
+    cin>>prodi;
+
+    //Output
+    cout<<"\t\tBiodata Mahasiswa"<<endl;
+    cout<<"======================================"<<endl;
+    cout<<"Nama\t\t:"<<nama<<endl;
+    cout<<"NIM\t\t:"<<nim<<endl;
+    cout<<"Prodi\t\t:"<<prodi<<endl;
+}

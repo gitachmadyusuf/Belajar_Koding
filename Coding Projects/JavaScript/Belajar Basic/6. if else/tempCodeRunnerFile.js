@@ -1,0 +1,11 @@
+var s = '';
+for ( var i = 0; i < 10; i++ ) {
+	for ( var j = 0; j < i; j++ ) {
+		s += ' ';
+	}
+    for ( var k = i; k < 10; k++) {
+	    s += '*'; 
+    }
+    s += '\n';
+}
+console.log(s);
