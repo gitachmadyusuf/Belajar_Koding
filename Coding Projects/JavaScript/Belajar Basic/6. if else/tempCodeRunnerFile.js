@@ -1,11 +1,12 @@
 var s = '';
-for ( var i = 0; i < 10; i++ ) {
-	for ( var j = 0; j < i; j++ ) {
-		s += ' ';
-	}
-    for ( var k = i; k < 10; k++) {
-	    s += '*'; 
+var tinggi = 5;
+
+for (var i = 1; i <= tinggi; i++) {
+    for (var j = 1; j <= tinggi - i; j++) {
+        s += ' ';
     }
+    s += '1 ';
+
     s += '\n';
 }
 console.log(s);

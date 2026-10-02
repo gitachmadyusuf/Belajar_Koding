@@ -1,12 +1,14 @@
-let tinggi = 5;
+var s = '';
+var tinggi = 5;
 
-for ( let i = 0; i < tinggi; i++) {
-    let line = ' '.repeat((tinggi - i)*2);
-    let val = 1;
-
-    for (let j = 0; j <= i; j++ ) {
-        line += val + '  ';
-        val = val * (i-j)/(j+1);
+for (var i = 1; i <= tinggi; i++) {
+    for (var j = 1; j <= tinggi - i; j++) {
+        s += ' ';
     }
-    console.log(line);
+    var 
+    for ( k = 1; k <= i; k++ ) {
+        s += '1 ';
+    }
+    s += '\n';
 }
+console.log(s);
